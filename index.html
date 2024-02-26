@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+
+      <style>
+         input {
+            display: block;
+            padding: 1rem;
+            border: 1px dotted gray;
+            margin-bottom: 1rem;
+         }
+
+         button {
+            padding: 1rem;
+            background: #007bff;
+            color: white;
+            margin-top: .75rem;
+            border: none;
+         }
+
+         p {
+            margin-top: 4rem;
+            margin-left: 2rem;
+         }
+
+         span {
+            border-bottom: 2px solid black;
+         }
+
+         #wrapper {
+            /* border: 1px solid red; */
+            padding: 2rem;
+            width: 600px;
+            margin: 3rem auto;
+         }
+      </style>
+
+   </head>
+
+   <body>
+
+
+      <div id="wrapper">
+
+         <input type="number" id="number1">
+         <input type="number" id="number2">
+         <button>Calculate!</button>
+
+         <p>Result: <span id="total"></span></p>
+      </div>
+
+
+      <script>
+
+         var calculateButton = document.querySelector("button");
+
+         calculateButton.addEventListener('click', function () {
+
+            var num1 = Number(document.querySelector("#number1").value);
+            var num2 = Number(document.querySelector("#number2").value);
+
+            var sum = num1 + num2;
+
+            document.querySelector("#total").textContent = sum;
+
+         });
+
+      </script>
+   </body>
+
+</html>
